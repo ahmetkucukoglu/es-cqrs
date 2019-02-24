@@ -1,10 +1,10 @@
 ## Event Sourcing - CQRS
 
 ### Used technologies
-Docker
-EventStore
-RavenDB
-ElasticSearch
+Docker  
+EventStore  
+RavenDB 
+ElasticSearch  
 
 > docker-compose up
 
@@ -12,20 +12,20 @@ ElasticSearch
 Meetup
 
 #### Domain Events
-MeetupRegistered
-MeetupSubjectChanged
-MeetupWhenChanged
-MeetupDescriptionChanged
-MeetupAddressChanged
-MeetupJoined
-MeetupPhotoAdded
-MeetupCommentAdded
-MeetupCompleted
-MeetupCancelled
+MeetupRegistered  
+MeetupSubjectChanged  
+MeetupWhenChanged  
+MeetupDescriptionChanged  
+MeetupAddressChanged  
+MeetupJoined  
+MeetupPhotoAdded  
+MeetupCommentAdded  
+MeetupCompleted  
+MeetupCancelled 
 
 #### Domain Services
 MeetupPolicy
 
 #### Projections
-QueryProjection
+QueryProjection  
 AutoCompleteProjection
