@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EventStore.ClientAPI.NetCore" Version="4.1.0.23" />
+    <PackageReference Include="NEST" Version="6.5.0" />
+    <PackageReference Include="RavenDB.Client" Version="4.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESSample.Application\ESSample.Application.csproj" />
+    <ProjectReference Include="..\ESSample.Infrastructure\ESSample.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

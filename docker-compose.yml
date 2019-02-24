@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+
+  elastickibana:
+    container_name: meetup-elastickibana
+    image : nshou/elasticsearch-kibana
+    ports:
+        - 9200:9200
+        - 5601:5601
+
+  eventstore:
+    container_name: meetup-eventstore
+    image: eventstore/eventstore
+    ports:
+        - 2113:2113
+        - 1113:1113
+    links:
+        - elastickibana
+    environment:
+        - EVENTSTORE_EXT_HTTP_PORT=2113
+        - EVENTSTORE_EXT_TCP_PORT=1113
+
+  ravendb:
+    container_name: meetup-ravendb
+    image: ravendb/ravendb
+    ports:
+        - 8080:8080
+    links:
+        - elastickibana
+    environment:
+        - RAVEN_Security_UnsecuredAccessAllowed=PublicNetwork
+        - RAVEN_ARGS="--Setup.Mode=None"
+
+networks:
+  default:
+    name: meetup-network
